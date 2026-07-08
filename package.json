@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@mermaid-js/mermaid-cli": "^11.4.2",
-    "@modelcontextprotocol/sdk": "^1.10.2",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^3.24.3"
   },
   "devDependencies": {

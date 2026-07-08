@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@eace32b20b1a3d0f6c0a5f4a2e0c85e2f1d4f7c9
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@60edb3dd545a775cebf3c44752f4ef835fa7142f
         with:
           node-version: 22
           cache: 'npm'
