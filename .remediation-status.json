@@ -1,0 +1,68 @@
+{
+  "project": "mcp-mermaid-validator",
+  "vetting_date": "2025-07-08",
+  "vetting_status": "COMPLETE",
+  "remediation_status": "COMPLETE",
+  "production_ready": true,
+  "audit_results": {
+    "pre_remediation": {
+      "total_vulnerabilities": 26,
+      "critical": 1,
+      "high": 9,
+      "moderate": 16,
+      "low": 0
+    },
+    "post_remediation": {
+      "total_vulnerabilities": 0,
+      "critical": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 0
+    }
+  },
+  "branch": "security/remediate-vulnerabilities",
+  "commit_hash": "f55e002",
+  "changes": {
+    "files_modified": 3,
+    "insertions": 516,
+    "deletions": 499,
+    "packages_updated": 516
+  },
+  "remediation_items": [
+    {
+      "id": 1,
+      "package": "@modelcontextprotocol/sdk",
+      "from_version": "1.10.2",
+      "to_version": "1.29.0",
+      "vulnerabilities_fixed": 3,
+      "cvss_scores": [8.7, 7.1, 7.6],
+      "cves": ["GHSA-8r9q-7v3j-jr4g", "GHSA-345p-7cg4-v4c7", "GHSA-w48q-cv73-mx4w"]
+    },
+    {
+      "id": 2,
+      "category": "transitive_dependencies",
+      "action": "npm audit fix",
+      "vulnerabilities_fixed": 23,
+      "scope": "dev_and_graph_processing"
+    },
+    {
+      "id": 3,
+      "file": ".github/workflows/lint.yml",
+      "action": "pin_github_actions_to_commit_sha",
+      "fixes": ["actions/checkout@v4", "actions/setup-node@v4"],
+      "prevents": "supply_chain_attacks"
+    }
+  ],
+  "verification_results": {
+    "npm_audit": "PASS",
+    "npm_build": "PASS",
+    "npm_lint": "PASS",
+    "semantic_versioning": "MAINTAINED",
+    "breaking_changes": "NONE"
+  },
+  "documentation": {
+    "security_scan_report": "SECURITY-SCAN.md",
+    "remediation_summary": "REMEDIATION-SUMMARY.md",
+    "deployment_guide": "REMEDIATION-COMPLETE.md"
+  }
+}
